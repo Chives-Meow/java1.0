@@ -5,7 +5,8 @@ java课程作业项目仓库
 
 ##实验目的
 ……………………………………
-利用Eclipse进行源代码的编译、调试及运行
+用类描述计算机中CPU的速度和硬盘的容量，
+利用Eclipse进行源代码的编译、调试及运行。
 ……………………………………
 ##实验过程
 ……………………………………
@@ -16,8 +17,45 @@ PC类用setCPU(CPU c)将参数c的值赋值给cpu，使用setHardDisk (HardDisk 
 ……………………………………
 ##实验结果
 ……………………………………
-
-
+核心代码
+CPU类：
+public class CPU { 
+ int speed; 
+ int getSpeed(){ 
+ return speed; 
+ } 
+ public void setSpeed(int speed){ 
+ this.speed = speed; 
+ } 
+ } 
+ HardDisk类：
+ public class HardDisk { 
+ int amount; 
+ int getAmount() { 
+ return amount;  
+ } 
+ public void setAmount(int amount){ 
+ this.amount = amount; 
+ } 
+   } 
+ PC类：
+ public class PC { 
+ CPU cpu; 
+ HardDisk HD; 
+ void setCPU(CPU cpu){ 
+ this.cpu = cpu; 
+ } 
+ void setHardDisk(HardDisk HD){ 
+ this.HD = HD; 
+ } 
+ void show(){ 
+ System.out.println("CPUËÙ¶È£º"+cpu.getSpeed()); 
+ System.out.println("Ó²ÅÌËÙ¶È£º"+HD.getAmount()); 
+ } 
+   } 
 ……………………………………
 ##实验感想
+……………………………………
+通过本次实验，我初次使用get，set函数，温习了实参的调用，例如PC类中调用的setCPU（）的方法，实参是CPU。
 
+……………………………………
